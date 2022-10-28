@@ -75,7 +75,7 @@ DROP DATABASE IF EXISTS SpotifyClone;
     ("Sandi Metz", 58, 2, "2018-04-29"),
     ("Paulo Freire", 19, 3, "2018-02-14"),
     ("Bell Hooks", 26, 3, "2018-01-05"),
-    ("Christopher Alexander", 85, 3, "2019-06-05"),
+    ("Christopher Alexander", 85, 4, "2019-06-05"),
     ("Judith Butler", 45, 3, "2020-05-13"),
     ("Jorge Amado", 58, 3, "2017-02-17");
 
@@ -120,7 +120,7 @@ DROP DATABASE IF EXISTS SpotifyClone;
   VALUES
     ("BREAK MY SOUL", 279, 1, 1 ),
     ("VIRGO’S GROOVE", 369, 1, 1 ),
-    ("ALIEN SUPERSTAR", 279, 1, 1 ),
+    ("ALIEN SUPERSTAR", 116, 1, 1 ),
     ("Don’t Stop Me Now",203, 2, 2 ),
     ("Under Pressure", 152, 2, 3),
     ("Como Nossos Pais", 105, 3, 4),
