@@ -12,3 +12,4 @@ GROUP BY
   U.usuario_nome
 ORDER BY
   U.usuario_nome;
+-- ta dando merda na linha 5
