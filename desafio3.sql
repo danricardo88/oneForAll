@@ -1,6 +1,6 @@
 SELECT
   U.usuario_nome AS usuario,
-  COUNT(*) AS qt_de_musicas_ouvidas,
+  COUNT(P.usuario_id) AS qt_de_musicas_ouvidas,
   FORMAT(SUM(S.duracao) / 60, 2) AS total_minutos
   
 FROM
@@ -9,7 +9,7 @@ FROM
   INNER JOIN SpotifyClone.tabela_musicas AS S ON P.musica_id = S.musica_id
   
 GROUP BY
-  U.usuario_nome
+  U.usuario_id
 ORDER BY
   U.usuario_nome;
--- ta dando merda na linha 5
+
