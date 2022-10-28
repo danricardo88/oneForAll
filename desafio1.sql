@@ -1,4 +1,4 @@
--- Active: 1666811490131@@127.0.0.1@3307@SpotifyClone
+-- Active: 1666811490131@@127.0.0.1@3307
 DROP DATABASE IF EXISTS SpotifyClone;
 
   CREATE DATABASE IF NOT EXISTS SpotifyClone;
@@ -53,7 +53,7 @@ DROP DATABASE IF EXISTS SpotifyClone;
     usuario_id INT NOT NULL,
     musica_id INT NOT NULL,
     data_de_reproducao DATETIME NOT NULL,
-    PRIMARY KEY (usuario_id, musica_id, data_de_reproducao),
+    PRIMARY KEY (usuario_id, musica_id),
     FOREIGN KEY (usuario_id) REFERENCES tabela_usuario(usuario_id),
     FOREIGN KEY (musica_id) REFERENCES tabela_musicas(musica_id)
   )ENGINE = InnoDB;
@@ -76,8 +76,8 @@ DROP DATABASE IF EXISTS SpotifyClone;
     ("Paulo Freire", 19, 3, "2018-02-14"),
     ("Bell Hooks", 26, 3, "2018-01-05"),
     ("Christopher Alexander", 85, 4, "2019-06-05"),
-    ("Judith Butler", 45, 3, "2020-05-13"),
-    ("Jorge Amado", 58, 3, "2017-02-17");
+    ("Judith Butler", 45, 4, "2020-05-13"),
+    ("Jorge Amado", 58, 4, "2017-02-17");
 
   INSERT INTO SpotifyClone.tabela_artista (artista_nome)
   VALUES
@@ -147,4 +147,3 @@ DROP DATABASE IF EXISTS SpotifyClone;
   (8, 4, "2012-03-17 14:56:41"),
   (9, 9, "2022-02-24 21:14:22"),
   (10, 3, "2015-12-13 08:30:22");
-
