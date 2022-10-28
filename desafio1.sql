@@ -1,4 +1,4 @@
--- Active: 1666811490131@@127.0.0.1@3307
+-- Active: 1666811490131@@127.0.0.1@3307@SpotifyClone
 DROP DATABASE IF EXISTS SpotifyClone;
 
   CREATE DATABASE IF NOT EXISTS SpotifyClone;
@@ -147,3 +147,4 @@ DROP DATABASE IF EXISTS SpotifyClone;
   (8, 4, "2012-03-17 14:56:41"),
   (9, 9, "2022-02-24 21:14:22"),
   (10, 3, "2015-12-13 08:30:22");
+
