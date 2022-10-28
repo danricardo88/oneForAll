@@ -1,3 +1,4 @@
+-- Active: 1666811490131@@127.0.0.1@3307
 DROP DATABASE IF EXISTS SpotifyClone;
 
   CREATE DATABASE IF NOT EXISTS SpotifyClone;
@@ -33,8 +34,8 @@ DROP DATABASE IF EXISTS SpotifyClone;
   CREATE TABLE SpotifyClone.tabela_albuns (
     album_id INT AUTO_INCREMENT PRIMARY KEY,
     album_nome varchar(150) NOT NULL,
-    data_de_lancamento INT NOT NULL,
     artista_id INT NOT NULL,
+    data_de_lancamento YEAR NOT NULL,
     FOREIGN KEY (artista_id) REFERENCES tabela_artista(artista_id)
  )ENGINE = InnoDB;
 
@@ -48,11 +49,11 @@ DROP DATABASE IF EXISTS SpotifyClone;
     FOREIGN KEY (album_id) REFERENCES tabela_albuns(album_id)
  )ENGINE = InnoDB;
 
-  CREATE TABLE SpotifyClone.tabela_de_reproducao (
+  CREATE TABLE SpotifyClone.tabela_de_reproducoes (
     usuario_id INT NOT NULL,
     musica_id INT NOT NULL,
     data_de_reproducao DATETIME NOT NULL,
-    PRIMARY KEY (usuario_id, musica_id),
+    PRIMARY KEY (usuario_id, musica_id, data_de_reproducao),
     FOREIGN KEY (usuario_id) REFERENCES tabela_usuario(usuario_id),
     FOREIGN KEY (musica_id) REFERENCES tabela_musicas(musica_id)
   )ENGINE = InnoDB;
@@ -128,7 +129,7 @@ DROP DATABASE IF EXISTS SpotifyClone;
     ("The Bard’s Song", 244, 5, 7),
     ("Feeling Good", 100, 6, 8);
 
-  INSERT INTO SpotifyClone.tabela_de_reproducao (usuario_id, musica_id, data_de_reproducao)
+  INSERT INTO SpotifyClone.tabela_de_reproducoes (usuario_id, musica_id, data_de_reproducao)
   VALUES
   (1, 8, "2022-02-28 10:45:55"),
   (1, 2, "2020-05-02 05:30:35"),
