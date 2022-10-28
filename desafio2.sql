@@ -1,7 +1,13 @@
-SELECT
-(SELECT COUNT(*) FROM tabela_musicas) AS cancoes,
-(SELECT COUNT(*) FROM tabela_artista) AS artistas,
-(SELECT COUNT(*) FROM tabela_albuns) AS albuns;
+SELECT COUNT(*) AS cancoes,
+  (SELECT COUNT(*) FROM `SpotifyClone`.tabela_artista) AS artistas,
+  (SELECT COUNT(*) FROM `SpotifyClone`.tabela_albuns) AS albuns
+FROM SpotifyClone.tabela_musicas;
+
+
+
+-- (SELECT COUNT(*) FROM tabela_musicas) AS cancoes,
+-- (SELECT COUNT(*) FROM tabela_artista) AS artistas,
+-- (SELECT COUNT(*) FROM tabela_albuns) AS albuns;
 
 
 -- SELECT

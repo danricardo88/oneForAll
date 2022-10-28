@@ -1,3 +1,4 @@
+-- Active: 1666811490131@@127.0.0.1@3307@SpotifyClone
 SELECT
 S.nome_musica AS cancao,
 COUNT(P.musica_id) as reproducoes
